@@ -2,4 +2,9 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  p ingresa el numero
+  form.small-form(action="/auth/login", method="post")
+    .form-group
+      input(type="text", name="numero" required).form-control
+    br
+    button.btn.btn-primary Generar
