@@ -1,6 +1,6 @@
 module.exports = class CalculoPrimarios {
     constructor() {}
-    
+
     primarios(numero) {
         let rango = numero;
         let j = 2;
@@ -21,6 +21,6 @@ module.exports = class CalculoPrimarios {
                 numerosPrimos.push(j);
             }
         }
-        return numerosPrimos;
+        return numerosPrimos.sort((a, b) => b - a);
     }
 }

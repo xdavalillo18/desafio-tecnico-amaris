@@ -8,7 +8,7 @@ describe('calculoPrimarios', function() {
 
     describe('#primarios', function() {
         it("Los numeros primarios resultantes estan correctos", function() {
-            assert.deepEqual(resultPrimarios.primarios(10), [ 2, 3, 5, 7 ]);
+            assert.deepEqual(resultPrimarios.primarios(10), [ 7, 5, 3, 2 ]);
         });
     });
 });
