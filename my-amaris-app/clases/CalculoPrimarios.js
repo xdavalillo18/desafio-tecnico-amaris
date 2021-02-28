@@ -1,9 +1,7 @@
 module.exports = class CalculoPrimarios {
-    constructor() {
-        console.log('Nueva instancia de Calculo Primarios');  
-    }
+    constructor() {}
+    
     primarios(numero) {
-        console.log('CalculoPrimarios');
         let rango = numero;
         let j = 2;
         let numerosPrimos = [];
@@ -23,7 +21,6 @@ module.exports = class CalculoPrimarios {
                 numerosPrimos.push(j);
             }
         }
-        console.log('numeros primarios: ', numerosPrimos);
         return numerosPrimos;
     }
 }
