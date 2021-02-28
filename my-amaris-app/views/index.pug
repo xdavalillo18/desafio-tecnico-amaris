@@ -3,7 +3,7 @@ extends layout
 block content
   h1= title
   p ingresa el numero
-  form.small-form(action="/auth/login", method="post")
+  form.small-form(action="/primos", method="get")
     .form-group
       input(type="text", name="numero" required).form-control
     br

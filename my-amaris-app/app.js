@@ -7,6 +7,7 @@ var http = require('http');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var primosRouter = require('./routes/primos');
 
 var app = express();
 
@@ -22,6 +23,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/primos', primosRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -38,10 +40,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
-app.get('/', (req, res) => {
-  res.status(200).send("Welcome to API REST")
-})
 
 http.createServer(app).listen(8001, () => {
   console.log('Server started at http://localhost:8001');
